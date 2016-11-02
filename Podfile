@@ -11,4 +11,6 @@ pod 'AFNetworking'
 
 pod 'CocoaLumberjack'
 
+pod 'Masonry'
+
 end
