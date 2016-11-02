@@ -24,25 +24,50 @@
 }
 
 - (void)testNumber {
-    NSNumber *number = [NSNumber numberWithInt:5];
+    NSNumber *number = @5;
     XCTAssertTrue([number isNumber]);
 
     NSString *string = @"string";
     XCTAssertFalse([string isNumber]);
 }
 
+- (void)testString {
+    NSString *string = @"";
+    XCTAssertTrue([string isString]);
+    XCTAssertFalse([string isValidString]);
 
+    NSString *string1 = @"string";
+    XCTAssertTrue([string1 isString]);
+    XCTAssertTrue([string1 isValidString]);
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    NSNumber *number = @5;
+    XCTAssertFalse([number isString]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testArray {
+    NSArray *array = @[];
+    XCTAssertTrue([array isArray]);
+    XCTAssertFalse([array isValidArray]);
+
+    NSArray *array1 = @[@5];
+    XCTAssertTrue([array1 isArray]);
+    XCTAssertTrue([array1 isValidArray]);
+
+    NSDictionary *dictionary = @{};
+    XCTAssertFalse([dictionary isArray]);
+}
+
+- (void)testDictionary {
+    NSDictionary *dictionary = @{};
+    XCTAssertTrue([dictionary isDictionary]);
+    XCTAssertFalse([dictionary isValidDictionary]);
+
+    NSDictionary *dictionary1 = @{@"5": @5};
+    XCTAssertTrue([dictionary1 isDictionary]);
+    XCTAssertTrue([dictionary1 isValidDictionary]);
+
+    NSArray *array = @[];
+    XCTAssertFalse([array isDictionary]);
 }
 
 @end
