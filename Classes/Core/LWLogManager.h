@@ -18,21 +18,33 @@ static const DDLogLevel ddLogLevel = DDLogLevelInfo;
 #endif
 
 #ifndef LWLogError
-#define LWLogError(fmt, ...) DDLogError((@"[LWLOG:] [ERROR] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LWLogError(fmt, ...) DDLogError((@"[LWLOG] [ERROR] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #endif
 
 #ifndef LWLogInfo
-#define LWLogInfo(fmt, ...) DDLogInfo((@"[LWLOG:] [INFO] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LWLogInfo(fmt, ...) DDLogInfo((@"[LWLOG] [INFO] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #endif
 
 #ifndef LWLogDebug
-#define LWLogDebug(fmt, ...) DDLogDebug((@"[LWLOG:] [DEBUG] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define LWLogDebug(fmt, ...) DDLogDebug((@"[LWLOG] [DEBUG] [FUNCTION %s Line %d.] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #endif
 
+/**
+ 日志管理系统
+ */
 @interface LWLogManager : NSObject
 
+/**
+ 设置日志系统
+ */
 + (void)setupLog;
 
+
+/**
+ 获取文件中存储的日志
+
+ @return 字符串
+ */
 + (NSString *)logMessage;
 
 @end

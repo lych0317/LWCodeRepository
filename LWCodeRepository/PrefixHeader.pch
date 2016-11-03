@@ -11,5 +11,7 @@
 
 #import "NSObject+Validate.h"
 #import "LWLogManager.h"
+#import "NSString+URL.h"
+#import "NSString+Encrypt.h"
 
 #endif /* PrefixHeader_pch */

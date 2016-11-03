@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ 验证类型
+ */
 @interface NSObject (Validate)
 
 /**

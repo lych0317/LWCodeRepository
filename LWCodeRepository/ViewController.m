@@ -20,9 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LWLogDebug(@"debug");
-    LWLogInfo(@"info");
-    LWLogError(@"error");
 
     UIButton *button = [[UIButton alloc] init];
     [self.view addSubview:button];

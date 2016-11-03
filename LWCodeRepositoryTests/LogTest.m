@@ -16,6 +16,7 @@
 
 - (void)setUp {
     [super setUp];
+    [LWLogManager setupLog];
 }
 
 - (void)tearDown {
