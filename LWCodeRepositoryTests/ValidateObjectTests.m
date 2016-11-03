@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "NSObject+Validate.h"
 
 @interface ValidateObjectTests : XCTestCase
 

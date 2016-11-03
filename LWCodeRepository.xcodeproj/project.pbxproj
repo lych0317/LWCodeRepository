@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80A0E9F84773F4AB878F1E42 /* libPods-CodeRepository-LWCodeRepositoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304404F28DC90DFE5FD58DD8 /* libPods-CodeRepository-LWCodeRepositoryTests.a */; };
+		8FFB73791DDD35429B50A251 /* libPods-CodeRepository-LWCodeRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94404E17BD4D233FA171FE4B /* libPods-CodeRepository-LWCodeRepository.a */; };
 		B32D21511DC33CBC00AC9F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21501DC33CBC00AC9F26 /* main.m */; };
 		B32D21541DC33CBC00AC9F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21531DC33CBC00AC9F26 /* AppDelegate.m */; };
 		B32D21571DC33CBC00AC9F26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21561DC33CBC00AC9F26 /* ViewController.m */; };
 		B32D215A1DC33CBC00AC9F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D21581DC33CBC00AC9F26 /* Main.storyboard */; };
 		B32D215C1DC33CBC00AC9F26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32D215B1DC33CBC00AC9F26 /* Assets.xcassets */; };
 		B32D215F1DC33CBC00AC9F26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D215D1DC33CBC00AC9F26 /* LaunchScreen.storyboard */; };
+		B358E9DD1DCB2BDC005048A9 /* LogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DC1DCB2BDC005048A9 /* LogTest.m */; };
 		B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB31DC71BD600590678 /* NSObject+Validate.m */; };
 		B3691CB71DC71DCC00590678 /* LWLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB61DC71DCC00590678 /* LWLogManager.m */; };
 		B3691CBF1DC7607600590678 /* LWCodeRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */; };
@@ -31,8 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		254A5CB6791819D1EC1AD338 /* Pods-LWCodeRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCodeRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository.debug.xcconfig"; sourceTree = "<group>"; };
+		304404F28DC90DFE5FD58DD8 /* libPods-CodeRepository-LWCodeRepositoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeRepository-LWCodeRepositoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94404E17BD4D233FA171FE4B /* libPods-CodeRepository-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeRepository-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D214C1DC33CBC00AC9F26 /* LWCodeRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWCodeRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D21501DC33CBC00AC9F26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B32D21521DC33CBC00AC9F26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +50,8 @@
 		B32D215B1DC33CBC00AC9F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32D215E1DC33CBC00AC9F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32D21601DC33CBC00AC9F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B358E9DB1DCB248A005048A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B358E9DC1DCB2BDC005048A9 /* LogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTest.m; sourceTree = "<group>"; };
 		B3691CB21DC71BD600590678 /* NSObject+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Validate.h"; sourceTree = "<group>"; };
 		B3691CB31DC71BD600590678 /* NSObject+Validate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Validate.m"; sourceTree = "<group>"; };
 		B3691CB51DC71DCC00590678 /* LWLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWLogManager.h; sourceTree = "<group>"; };
@@ -51,6 +60,8 @@
 		B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWCodeRepositoryTests.m; sourceTree = "<group>"; };
 		B3691CC01DC7607600590678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3691CC61DC760C200590678 /* ValidateObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateObjectTests.m; sourceTree = "<group>"; };
+		CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
+		D405005F1641B15A986AA229 /* Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0473DFC55F1775D0F2F69E /* libPods-LWCodeRepository.a in Frameworks */,
+				8FFB73791DDD35429B50A251 /* libPods-CodeRepository-LWCodeRepository.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80A0E9F84773F4AB878F1E42 /* libPods-CodeRepository-LWCodeRepositoryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */,
+				94404E17BD4D233FA171FE4B /* libPods-CodeRepository-LWCodeRepository.a */,
+				304404F28DC90DFE5FD58DD8 /* libPods-CodeRepository-LWCodeRepositoryTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				B32D21501DC33CBC00AC9F26 /* main.m */,
+				B358E9DB1DCB248A005048A9 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,6 +147,7 @@
 			children = (
 				B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */,
 				B3691CC61DC760C200590678 /* ValidateObjectTests.m */,
+				B358E9DC1DCB2BDC005048A9 /* LogTest.m */,
 				B3691CC01DC7607600590678 /* Info.plist */,
 			);
 			path = LWCodeRepositoryTests;
@@ -168,6 +185,10 @@
 			children = (
 				254A5CB6791819D1EC1AD338 /* Pods-LWCodeRepository.debug.xcconfig */,
 				E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */,
+				11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */,
+				CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */,
+				4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */,
+				D405005F1641B15A986AA229 /* Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -199,9 +220,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3691CC51DC7607600590678 /* Build configuration list for PBXNativeTarget "LWCodeRepositoryTests" */;
 			buildPhases = (
+				4B869B1EF81201D70F4B96EE /* [CP] Check Pods Manifest.lock */,
 				B3691CB81DC7607600590678 /* Sources */,
 				B3691CB91DC7607600590678 /* Frameworks */,
 				B3691CBA1DC7607600590678 /* Resources */,
+				3AFF067DE14AD4F87AC0014E /* [CP] Embed Pods Frameworks */,
+				8633A87B130CC8C2426A6CAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,7 +308,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AFF067DE14AD4F87AC0014E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B869B1EF81201D70F4B96EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5F054867DADDCF7BA83A5673 /* [CP] Check Pods Manifest.lock */ = {
@@ -302,6 +356,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		8633A87B130CC8C2426A6CAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9EBEF8C76F45810DDCA67BB7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,7 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -338,6 +407,7 @@
 			files = (
 				B3691CC71DC760C200590678 /* ValidateObjectTests.m in Sources */,
 				B3691CBF1DC7607600590678 /* LWCodeRepositoryTests.m in Sources */,
+				B358E9DD1DCB2BDC005048A9 /* LogTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,10 +527,11 @@
 		};
 		B32D21641DC33CBC00AC9F26 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 254A5CB6791819D1EC1AD338 /* Pods-LWCodeRepository.debug.xcconfig */;
+			baseConfigurationReference = 11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zuoyi Wang (6Z2DM2952S)";
+				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
 				INFOPLIST_FILE = LWCodeRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -472,9 +543,10 @@
 		};
 		B32D21651DC33CBC00AC9F26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */;
+			baseConfigurationReference = CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
 				INFOPLIST_FILE = LWCodeRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -485,9 +557,11 @@
 		};
 		B3691CC31DC7607600590678 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X4W53U5EK5;
+				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
 				INFOPLIST_FILE = LWCodeRepositoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyc.LWCodeRepositoryTests;
@@ -498,9 +572,11 @@
 		};
 		B3691CC41DC7607600590678 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D405005F1641B15A986AA229 /* Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X4W53U5EK5;
+				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
 				INFOPLIST_FILE = LWCodeRepositoryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyc.LWCodeRepositoryTests;

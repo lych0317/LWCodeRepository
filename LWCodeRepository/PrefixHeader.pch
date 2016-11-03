@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  LWCodeRepository
+//
+//  Created by leo.li on 2016/11/3.
+//  Copyright © 2016年 liyc_dev. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "NSObject+Validate.h"
+#import "LWLogManager.h"
+
+#endif /* PrefixHeader_pch */
