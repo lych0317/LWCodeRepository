@@ -13,5 +13,9 @@
 #import "LWLogManager.h"
 #import "NSString+URL.h"
 #import "NSString+Encrypt.h"
+#import "NSString+Format.h"
+
+/** 防止循环引用 */
+#define WS(weakSelf)                __weak __typeof(&*self) weakSelf = self;
 
 #endif /* PrefixHeader_pch */

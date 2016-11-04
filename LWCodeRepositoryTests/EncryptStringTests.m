@@ -1,5 +1,5 @@
 //
-//  EncryptStringTest.m
+//  EncryptStringTests.m
 //  LWCodeRepository
 //
 //  Created by leo.li on 2016/11/3.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface EncryptStringTest : XCTestCase
+@interface EncryptStringTests : XCTestCase
 
 @end
 
-@implementation EncryptStringTest
+@implementation EncryptStringTests
 
 - (void)setUp {
     [super setUp];

@@ -9,25 +9,36 @@
 /* Begin PBXBuildFile section */
 		80A0E9F84773F4AB878F1E42 /* libPods-CodeRepository-LWCodeRepositoryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 304404F28DC90DFE5FD58DD8 /* libPods-CodeRepository-LWCodeRepositoryTests.a */; };
 		8FFB73791DDD35429B50A251 /* libPods-CodeRepository-LWCodeRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94404E17BD4D233FA171FE4B /* libPods-CodeRepository-LWCodeRepository.a */; };
+		B31174461DCC30EC0011C3C5 /* NSString+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = B31174451DCC30EC0011C3C5 /* NSString+Format.m */; };
 		B32D21511DC33CBC00AC9F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21501DC33CBC00AC9F26 /* main.m */; };
 		B32D21541DC33CBC00AC9F26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21531DC33CBC00AC9F26 /* AppDelegate.m */; };
 		B32D21571DC33CBC00AC9F26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21561DC33CBC00AC9F26 /* ViewController.m */; };
 		B32D215A1DC33CBC00AC9F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D21581DC33CBC00AC9F26 /* Main.storyboard */; };
 		B32D215C1DC33CBC00AC9F26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32D215B1DC33CBC00AC9F26 /* Assets.xcassets */; };
 		B32D215F1DC33CBC00AC9F26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32D215D1DC33CBC00AC9F26 /* LaunchScreen.storyboard */; };
-		B358E9DD1DCB2BDC005048A9 /* LogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DC1DCB2BDC005048A9 /* LogTest.m */; };
+		B358E9DD1DCB2BDC005048A9 /* LogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DC1DCB2BDC005048A9 /* LogTests.m */; };
+		B358E9E01DCB2F19005048A9 /* LWHttpUploadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DF1DCB2F19005048A9 /* LWHttpUploadFile.m */; };
+		B358E9E31DCB30AD005048A9 /* LWHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E21DCB30AD005048A9 /* LWHttpRequest.m */; };
+		B358E9E61DCB3152005048A9 /* LWHttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E51DCB3152005048A9 /* LWHttpRequestManager.m */; };
+		B358E9E91DCB323C005048A9 /* LWHttpConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E81DCB323C005048A9 /* LWHttpConfigure.m */; };
 		B358E9EC1DCB3DF2005048A9 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9EB1DCB3DF2005048A9 /* NSString+URL.m */; };
 		B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB31DC71BD600590678 /* NSObject+Validate.m */; };
 		B3691CB71DC71DCC00590678 /* LWLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB61DC71DCC00590678 /* LWLogManager.m */; };
 		B3691CBF1DC7607600590678 /* LWCodeRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */; };
 		B3691CC71DC760C200590678 /* ValidateObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CC61DC760C200590678 /* ValidateObjectTests.m */; };
+		B39E67F11DCC660700549B70 /* HttpRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B39E67F01DCC660700549B70 /* HttpRequestTests.m */; };
+		B39E67F21DCC66B800549B70 /* LWHttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E51DCB3152005048A9 /* LWHttpRequestManager.m */; };
+		B39E67F31DCC66BC00549B70 /* LWHttpConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E81DCB323C005048A9 /* LWHttpConfigure.m */; };
+		B39E67F41DCC66C000549B70 /* LWHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E21DCB30AD005048A9 /* LWHttpRequest.m */; };
+		B39E67F51DCC66C400549B70 /* LWHttpUploadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DF1DCB2F19005048A9 /* LWHttpUploadFile.m */; };
+		B39E67F61DCC66CB00549B70 /* NSString+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = B31174451DCC30EC0011C3C5 /* NSString+Format.m */; };
 		B3AB445B1DCB48ED00765500 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */; };
-		B3AB44601DCB49F600765500 /* URLStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445F1DCB49F600765500 /* URLStringTest.m */; };
+		B3AB44601DCB49F600765500 /* URLStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445F1DCB49F600765500 /* URLStringTests.m */; };
 		B3AB44611DCB552600765500 /* LWLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB61DC71DCC00590678 /* LWLogManager.m */; };
 		B3AB44621DCB555900765500 /* NSObject+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB31DC71BD600590678 /* NSObject+Validate.m */; };
 		B3AB44631DCB555D00765500 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9EB1DCB3DF2005048A9 /* NSString+URL.m */; };
 		B3AB44641DCB556100765500 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */; };
-		B3AB44661DCB592300765500 /* EncryptStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB44651DCB592300765500 /* EncryptStringTest.m */; };
+		B3AB44661DCB592300765500 /* EncryptStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB44651DCB592300765500 /* EncryptStringTests.m */; };
 		BA0473DFC55F1775D0F2F69E /* libPods-LWCodeRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +59,8 @@
 		34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		94404E17BD4D233FA171FE4B /* libPods-CodeRepository-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeRepository-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31174441DCC30EC0011C3C5 /* NSString+Format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Format.h"; sourceTree = "<group>"; };
+		B31174451DCC30EC0011C3C5 /* NSString+Format.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Format.m"; sourceTree = "<group>"; };
 		B32D214C1DC33CBC00AC9F26 /* LWCodeRepository.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LWCodeRepository.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D21501DC33CBC00AC9F26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B32D21521DC33CBC00AC9F26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,7 +72,15 @@
 		B32D215E1DC33CBC00AC9F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32D21601DC33CBC00AC9F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B358E9DB1DCB248A005048A9 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		B358E9DC1DCB2BDC005048A9 /* LogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTest.m; sourceTree = "<group>"; };
+		B358E9DC1DCB2BDC005048A9 /* LogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogTests.m; sourceTree = "<group>"; };
+		B358E9DE1DCB2F19005048A9 /* LWHttpUploadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHttpUploadFile.h; sourceTree = "<group>"; };
+		B358E9DF1DCB2F19005048A9 /* LWHttpUploadFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHttpUploadFile.m; sourceTree = "<group>"; };
+		B358E9E11DCB30AD005048A9 /* LWHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHttpRequest.h; sourceTree = "<group>"; };
+		B358E9E21DCB30AD005048A9 /* LWHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHttpRequest.m; sourceTree = "<group>"; };
+		B358E9E41DCB3152005048A9 /* LWHttpRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHttpRequestManager.h; sourceTree = "<group>"; };
+		B358E9E51DCB3152005048A9 /* LWHttpRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHttpRequestManager.m; sourceTree = "<group>"; };
+		B358E9E71DCB323C005048A9 /* LWHttpConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWHttpConfigure.h; sourceTree = "<group>"; };
+		B358E9E81DCB323C005048A9 /* LWHttpConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWHttpConfigure.m; sourceTree = "<group>"; };
 		B358E9EA1DCB3DF2005048A9 /* NSString+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URL.h"; sourceTree = "<group>"; };
 		B358E9EB1DCB3DF2005048A9 /* NSString+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URL.m"; sourceTree = "<group>"; };
 		B3691CB21DC71BD600590678 /* NSObject+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Validate.h"; sourceTree = "<group>"; };
@@ -70,10 +91,11 @@
 		B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LWCodeRepositoryTests.m; sourceTree = "<group>"; };
 		B3691CC01DC7607600590678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3691CC61DC760C200590678 /* ValidateObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateObjectTests.m; sourceTree = "<group>"; };
+		B39E67F01DCC660700549B70 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
 		B3AB44591DCB48ED00765500 /* NSString+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encrypt.h"; sourceTree = "<group>"; };
 		B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
-		B3AB445F1DCB49F600765500 /* URLStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLStringTest.m; sourceTree = "<group>"; };
-		B3AB44651DCB592300765500 /* EncryptStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptStringTest.m; sourceTree = "<group>"; };
+		B3AB445F1DCB49F600765500 /* URLStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLStringTests.m; sourceTree = "<group>"; };
+		B3AB44651DCB592300765500 /* EncryptStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptStringTests.m; sourceTree = "<group>"; };
 		CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
 		D405005F1641B15A986AA229 /* Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
 		E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,9 +183,10 @@
 			children = (
 				B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */,
 				B3691CC61DC760C200590678 /* ValidateObjectTests.m */,
-				B358E9DC1DCB2BDC005048A9 /* LogTest.m */,
-				B3AB445F1DCB49F600765500 /* URLStringTest.m */,
-				B3AB44651DCB592300765500 /* EncryptStringTest.m */,
+				B358E9DC1DCB2BDC005048A9 /* LogTests.m */,
+				B3AB445F1DCB49F600765500 /* URLStringTests.m */,
+				B3AB44651DCB592300765500 /* EncryptStringTests.m */,
+				B39E67F01DCC660700549B70 /* HttpRequestTests.m */,
 				B3691CC01DC7607600590678 /* Info.plist */,
 			);
 			path = LWCodeRepositoryTests;
@@ -187,6 +210,8 @@
 				B358E9EB1DCB3DF2005048A9 /* NSString+URL.m */,
 				B3AB44591DCB48ED00765500 /* NSString+Encrypt.h */,
 				B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */,
+				B31174441DCC30EC0011C3C5 /* NSString+Format.h */,
+				B31174451DCC30EC0011C3C5 /* NSString+Format.m */,
 				B3691CB51DC71DCC00590678 /* LWLogManager.h */,
 				B3691CB61DC71DCC00590678 /* LWLogManager.m */,
 			);
@@ -196,6 +221,14 @@
 		B3DC25C41DC3521500F77A10 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B358E9DE1DCB2F19005048A9 /* LWHttpUploadFile.h */,
+				B358E9DF1DCB2F19005048A9 /* LWHttpUploadFile.m */,
+				B358E9E11DCB30AD005048A9 /* LWHttpRequest.h */,
+				B358E9E21DCB30AD005048A9 /* LWHttpRequest.m */,
+				B358E9E41DCB3152005048A9 /* LWHttpRequestManager.h */,
+				B358E9E51DCB3152005048A9 /* LWHttpRequestManager.m */,
+				B358E9E71DCB323C005048A9 /* LWHttpConfigure.h */,
+				B358E9E81DCB323C005048A9 /* LWHttpConfigure.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -263,7 +296,7 @@
 		B32D21441DC33CBC00AC9F26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = liyc_dev;
 				TargetAttributes = {
 					B32D214B1DC33CBC00AC9F26 = {
@@ -413,10 +446,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31174461DCC30EC0011C3C5 /* NSString+Format.m in Sources */,
+				B358E9E61DCB3152005048A9 /* LWHttpRequestManager.m in Sources */,
 				B32D21571DC33CBC00AC9F26 /* ViewController.m in Sources */,
 				B358E9EC1DCB3DF2005048A9 /* NSString+URL.m in Sources */,
+				B358E9E31DCB30AD005048A9 /* LWHttpRequest.m in Sources */,
+				B358E9E91DCB323C005048A9 /* LWHttpConfigure.m in Sources */,
 				B3691CB71DC71DCC00590678 /* LWLogManager.m in Sources */,
 				B32D21541DC33CBC00AC9F26 /* AppDelegate.m in Sources */,
+				B358E9E01DCB2F19005048A9 /* LWHttpUploadFile.m in Sources */,
 				B32D21511DC33CBC00AC9F26 /* main.m in Sources */,
 				B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */,
 				B3AB445B1DCB48ED00765500 /* NSString+Encrypt.m in Sources */,
@@ -427,15 +465,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39E67F61DCC66CB00549B70 /* NSString+Format.m in Sources */,
 				B3AB44631DCB555D00765500 /* NSString+URL.m in Sources */,
-				B3AB44601DCB49F600765500 /* URLStringTest.m in Sources */,
+				B39E67F41DCC66C000549B70 /* LWHttpRequest.m in Sources */,
+				B39E67F11DCC660700549B70 /* HttpRequestTests.m in Sources */,
+				B3AB44601DCB49F600765500 /* URLStringTests.m in Sources */,
+				B39E67F21DCC66B800549B70 /* LWHttpRequestManager.m in Sources */,
 				B3AB44611DCB552600765500 /* LWLogManager.m in Sources */,
+				B39E67F31DCC66BC00549B70 /* LWHttpConfigure.m in Sources */,
 				B3691CC71DC760C200590678 /* ValidateObjectTests.m in Sources */,
 				B3AB44621DCB555900765500 /* NSObject+Validate.m in Sources */,
 				B3AB44641DCB556100765500 /* NSString+Encrypt.m in Sources */,
 				B3691CBF1DC7607600590678 /* LWCodeRepositoryTests.m in Sources */,
-				B3AB44661DCB592300765500 /* EncryptStringTest.m in Sources */,
-				B358E9DD1DCB2BDC005048A9 /* LogTest.m in Sources */,
+				B3AB44661DCB592300765500 /* EncryptStringTests.m in Sources */,
+				B358E9DD1DCB2BDC005048A9 /* LogTests.m in Sources */,
+				B39E67F51DCC66C400549B70 /* LWHttpUploadFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,8 +527,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -528,8 +574,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

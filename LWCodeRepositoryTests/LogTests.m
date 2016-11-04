@@ -1,5 +1,5 @@
 //
-//  LogTest.m
+//  LogTests.m
 //  LWCodeRepository
 //
 //  Created by leo.li on 2016/11/3.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface LogTest : XCTestCase
+@interface LogTests : XCTestCase
 
 @end
 
-@implementation LogTest
+@implementation LogTests
 
 - (void)setUp {
     [super setUp];

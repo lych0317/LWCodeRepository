@@ -1,5 +1,5 @@
 //
-//  URLStringTest.m
+//  URLStringTests.m
 //  LWCodeRepository
 //
 //  Created by leo.li on 2016/11/3.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface URLStringTest : XCTestCase
+@interface URLStringTests : XCTestCase
 
 @end
 
-@implementation URLStringTest
+@implementation URLStringTests
 
 - (void)setUp {
     [super setUp];
