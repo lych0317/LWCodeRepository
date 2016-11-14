@@ -76,16 +76,11 @@
                           passKey:(NSString *)passKey
                       requestData:(NSDictionary *)dicData
                       resultBlock:(LWHttpRequestResultBlock)resultBlock {
-    NSString *httpServer = HTTP_SERVER;
+    return [self startWithHttpMethod:httpMethod server:HTTP_SERVER passKey:passKey requestData:dicData resultBlock:resultBlock];
+}
 
-    NSString *requestId = [self startWithHttpServer:httpServer
-                                       httpHostName:nil
-                                         HttpMethod:httpMethod
-                                            passKey:passKey
-                                        requestData:dicData
-                                        resultBlock:resultBlock];
-
-    return requestId;
+- (NSString *)startWithHttpMethod:(LWHttpMethod)httpMethod server:(NSString *)server passKey:(NSString *)passKey requestData:(NSDictionary *)dicData resultBlock:(LWHttpRequestResultBlock)resultBlock {
+    return [self startWithHttpServer:server httpHostName:nil HttpMethod:httpMethod passKey:passKey requestData:dicData resultBlock:resultBlock];
 }
 
 - (void)stopHttpRequestWithRequestId:(NSString *)requestId {
