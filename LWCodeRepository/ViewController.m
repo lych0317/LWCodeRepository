@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <Masonry.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIImage+MultiFormat.h>
 
 @interface ViewController ()
 
@@ -20,6 +22,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSArray *array1 = @[@{@"zero": @"0"}];
+    NSArray *array2 = @[@{@"zero": @"0", @"one": @"1"}];
+
+    LWLogInfo(@"array1 == array2 %@", @([array1 isEqualToArray:array2]));
+
+    NSData *data1 = [NSKeyedArchiver archivedDataWithRootObject:array1];
+    NSData *data2 = [NSKeyedArchiver archivedDataWithRootObject:array2];
+
+    LWLogInfo(@"data1 %@", data1);
+    LWLogInfo(@"data2 %@", data2);
+
+    LWLogInfo(@"data1 == data2 %@", @([data1 isEqualToData:data2]));
+
+
+
+
+
+
 
     UIButton *button = [[UIButton alloc] init];
     [self.view addSubview:button];
@@ -51,6 +72,21 @@
         make.left.right.top.equalTo(@0);
         make.height.equalTo(@100);
     }];
+
+
+
+    UIImageView *imageView = [[UIImageView alloc] init];
+    [self.view addSubview:imageView];
+
+    imageView.frame = CGRectMake(100, 100, 100, 100);
+
+    NSURL *url = [NSURL URLWithString:@"http://img.hongrenshuo.com.cn/17627114782751479381272120.png"];
+
+//    NSData *data = [NSData dataWithContentsOfURL:url];
+
+//    imageView.image = [UIImage sd_imageWithData:data];
+
+    [imageView sd_setImageWithURL:url];
 }
 
 - (void)buttonAction:(UIButton *)sender {

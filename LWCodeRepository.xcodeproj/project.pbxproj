@@ -39,6 +39,7 @@
 		B3AB44631DCB555D00765500 /* NSString+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9EB1DCB3DF2005048A9 /* NSString+URL.m */; };
 		B3AB44641DCB556100765500 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */; };
 		B3AB44661DCB592300765500 /* EncryptStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB44651DCB592300765500 /* EncryptStringTests.m */; };
+		B3AE7BE51DDDA346006A8A87 /* CompareObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AE7BE41DDDA346006A8A87 /* CompareObjectTests.m */; };
 		BA0473DFC55F1775D0F2F69E /* libPods-LWCodeRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */; };
 /* End PBXBuildFile section */
 
@@ -54,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; sourceTree = "<group>"; };
-		254A5CB6791819D1EC1AD338 /* Pods-LWCodeRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCodeRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		304404F28DC90DFE5FD58DD8 /* libPods-CodeRepository-LWCodeRepositoryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeRepository-LWCodeRepositoryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		B3AB445F1DCB49F600765500 /* URLStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLStringTests.m; sourceTree = "<group>"; };
 		B3AB44651DCB592300765500 /* EncryptStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptStringTests.m; sourceTree = "<group>"; };
+		B3AE7BE41DDDA346006A8A87 /* CompareObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompareObjectTests.m; sourceTree = "<group>"; };
 		CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
 		D405005F1641B15A986AA229 /* Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.release.xcconfig"; sourceTree = "<group>"; };
-		E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LWCodeRepository.release.xcconfig"; path = "Pods/Target Support Files/Pods-LWCodeRepository/Pods-LWCodeRepository.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +187,7 @@
 				B3AB445F1DCB49F600765500 /* URLStringTests.m */,
 				B3AB44651DCB592300765500 /* EncryptStringTests.m */,
 				B39E67F01DCC660700549B70 /* HttpRequestTests.m */,
+				B3AE7BE41DDDA346006A8A87 /* CompareObjectTests.m */,
 				B3691CC01DC7607600590678 /* Info.plist */,
 			);
 			path = LWCodeRepositoryTests;
@@ -236,8 +237,6 @@
 		E89CCD3FD538BBC4D3C194FC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				254A5CB6791819D1EC1AD338 /* Pods-LWCodeRepository.debug.xcconfig */,
-				E24A83375AF5BCA60898434E /* Pods-LWCodeRepository.release.xcconfig */,
 				11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */,
 				CB54C7F8B582DC39D6FD7352 /* Pods-CodeRepository-LWCodeRepository.release.xcconfig */,
 				4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */,
@@ -465,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3AE7BE51DDDA346006A8A87 /* CompareObjectTests.m in Sources */,
 				B39E67F61DCC66CB00549B70 /* NSString+Format.m in Sources */,
 				B3AB44631DCB555D00765500 /* NSString+URL.m in Sources */,
 				B39E67F41DCC66C000549B70 /* LWHttpRequest.m in Sources */,
@@ -608,9 +608,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Zuoyi Wang (6Z2DM2952S)";
 				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = LWCodeRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Classes/libwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyc.LWCodeRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "844e8a4f-f039-4f16-af04-8c3e82b457c6";
@@ -623,9 +628,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = LWCodeRepository/PrefixHeader.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = LWCodeRepository/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Classes/libwebp",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liyc.LWCodeRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

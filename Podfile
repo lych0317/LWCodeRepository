@@ -13,6 +13,9 @@ pod 'CocoaLumberjack'
 
 pod 'Masonry'
 
+pod 'SDWebImage'
+pod 'SDWebImage/WebP'
+
 target 'LWCodeRepository'
 target 'LWCodeRepositoryTests'
 
