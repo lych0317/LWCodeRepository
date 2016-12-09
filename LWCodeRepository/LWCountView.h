@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  LWCountView.h
 //  LWCodeRepository
 //
-//  Created by leo.li on 16/10/28.
+//  Created by leo.li on 2016/11/21.
 //  Copyright © 2016年 liyc_dev. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LWCountView : UIView
 
 @end
-
