@@ -28,6 +28,8 @@
 
     NSURL *url = [NSURL URLWithString:@"http://img.hongrenshuo.com.cn/17627114782751479381272120.png"];
 
+    [[SDImageCache sharedImageCache] removeImageForKey:url.absoluteString];
+
     [imageView sd_setImageWithURL:url];
 }
 
