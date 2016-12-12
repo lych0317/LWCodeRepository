@@ -10,6 +10,7 @@
 #import "CountViewController.h"
 #import "MasonryViewController.h"
 #import "WebPImageViewController.h"
+#import "ImageTransformViewController.h"
 
 @interface TableViewController ()
 
@@ -31,6 +32,9 @@
         }
         else if (indexPath.row == 2) {
             [self.navigationController pushViewController:[[WebPImageViewController alloc] init] animated:YES];
+        }
+        else if (indexPath.row == 3) {
+            [self.navigationController pushViewController:[[ImageTransformViewController alloc] init] animated:YES];
         }
     }
 }

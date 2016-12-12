@@ -24,6 +24,8 @@
 		B35A2C9E1DFAA5B50080778B /* CountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A2C9D1DFAA5B50080778B /* CountViewController.m */; };
 		B35A2CA31DFAA68B0080778B /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A2CA21DFAA68B0080778B /* MasonryViewController.m */; };
 		B35A2CA71DFAA7AF0080778B /* WebPImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A2CA61DFAA7AF0080778B /* WebPImageViewController.m */; };
+		B35A2CAB1DFAB0C70080778B /* ImageTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B35A2CAA1DFAB0C70080778B /* ImageTransformViewController.m */; };
+		B35A2CAD1DFAB1610080778B /* testImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B35A2CAC1DFAB1610080778B /* testImg@2x.png */; };
 		B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB31DC71BD600590678 /* NSObject+Validate.m */; };
 		B3691CB71DC71DCC00590678 /* LWLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CB61DC71DCC00590678 /* LWLogManager.m */; };
 		B3691CBF1DC7607600590678 /* LWCodeRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3691CBE1DC7607600590678 /* LWCodeRepositoryTests.m */; };
@@ -90,6 +92,9 @@
 		B35A2CA21DFAA68B0080778B /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		B35A2CA51DFAA7AF0080778B /* WebPImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebPImageViewController.h; sourceTree = "<group>"; };
 		B35A2CA61DFAA7AF0080778B /* WebPImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebPImageViewController.m; sourceTree = "<group>"; };
+		B35A2CA91DFAB0C70080778B /* ImageTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransformViewController.h; sourceTree = "<group>"; };
+		B35A2CAA1DFAB0C70080778B /* ImageTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransformViewController.m; sourceTree = "<group>"; };
+		B35A2CAC1DFAB1610080778B /* testImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "testImg@2x.png"; sourceTree = "<group>"; };
 		B3691CB21DC71BD600590678 /* NSObject+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Validate.h"; sourceTree = "<group>"; };
 		B3691CB31DC71BD600590678 /* NSObject+Validate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Validate.m"; sourceTree = "<group>"; };
 		B3691CB51DC71DCC00590678 /* LWLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWLogManager.h; sourceTree = "<group>"; };
@@ -166,6 +171,7 @@
 		B32D214E1DC33CBC00AC9F26 /* LWCodeRepository */ = {
 			isa = PBXGroup;
 			children = (
+				B35A2CA81DFAAFB50080778B /* 图片旋转动画 */,
 				B35A2CA41DFAA77B0080778B /* webp图片 */,
 				B35A2CA01DFAA6560080778B /* masonry+frame动画 */,
 				B35A2C9F1DFAA60C0080778B /* 计数view */,
@@ -218,6 +224,16 @@
 				B35A2CA61DFAA7AF0080778B /* WebPImageViewController.m */,
 			);
 			name = "webp图片";
+			sourceTree = "<group>";
+		};
+		B35A2CA81DFAAFB50080778B /* 图片旋转动画 */ = {
+			isa = PBXGroup;
+			children = (
+				B35A2CAC1DFAB1610080778B /* testImg@2x.png */,
+				B35A2CA91DFAB0C70080778B /* ImageTransformViewController.h */,
+				B35A2CAA1DFAB0C70080778B /* ImageTransformViewController.m */,
+			);
+			name = "图片旋转动画";
 			sourceTree = "<group>";
 		};
 		B3691CBD1DC7607600590678 /* LWCodeRepositoryTests */ = {
@@ -382,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35A2CAD1DFAB1610080778B /* testImg@2x.png in Resources */,
 				B32D215F1DC33CBC00AC9F26 /* LaunchScreen.storyboard in Resources */,
 				B32D215C1DC33CBC00AC9F26 /* Assets.xcassets in Resources */,
 				B32D215A1DC33CBC00AC9F26 /* Main.storyboard in Resources */,
@@ -506,6 +523,7 @@
 				B3691CB71DC71DCC00590678 /* LWLogManager.m in Sources */,
 				B35A2CA31DFAA68B0080778B /* MasonryViewController.m in Sources */,
 				B32D21541DC33CBC00AC9F26 /* AppDelegate.m in Sources */,
+				B35A2CAB1DFAB0C70080778B /* ImageTransformViewController.m in Sources */,
 				B358E9E01DCB2F19005048A9 /* LWHttpUploadFile.m in Sources */,
 				B32D21511DC33CBC00AC9F26 /* main.m in Sources */,
 				B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */,
