@@ -13,6 +13,8 @@
 @property (nonatomic, assign) BOOL isplay;
 @property (nonatomic, weak) UIImageView *imageView;
 
+@property (nonatomic, strong) UIView *contatinerView;
+
 @end
 
 @implementation ImageTransformViewController
@@ -58,6 +60,52 @@
     [pauseButton setTitle:@"暂停" forState:UIControlStateNormal];
     pauseButton.backgroundColor = [UIColor redColor];
     [self.view addSubview:pauseButton];
+
+
+//    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 50, 100)];
+//    containerView.backgroundColor = [UIColor redColor];
+//    containerView.clipsToBounds = YES;
+//    [self.view addSubview:containerView];
+//    self.contatinerView = containerView;
+//
+//    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//    imageView1.image = [UIImage imageNamed:@"testImg"];
+//    imageView1.layer.cornerRadius = 50;
+//    imageView1.layer.masksToBounds = YES;
+//    [containerView addSubview:imageView1];
+
+    CALayer *layer = [self lineAnimation];
+    layer.backgroundColor = [UIColor redColor].CGColor;
+    layer.frame = CGRectMake(20, 200, 70, 26);
+    layer.cornerRadius = 13;
+    [self.view.layer addSublayer:layer];
+}
+
+- (CALayer *)lineAnimation{
+    /*        创建模板层         */
+    CAShapeLayer *shape           = [CAShapeLayer layer];
+    shape.frame                   = CGRectMake(15, 10, 4, 6);
+    shape.path                    = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 4, 6)].CGPath;
+    shape.fillColor               = [UIColor whiteColor].CGColor;
+    [shape addAnimation:[self animationForScaleSmall] forKey:nil];
+
+    /*        创建克隆层的持有对象         */
+    CAReplicatorLayer *replicator = [CAReplicatorLayer layer];
+    replicator.instanceDelay      = 0.5;
+    replicator.instanceCount      = 3;
+    replicator.instanceTransform  = CATransform3DMakeTranslation(15, 0, 0);
+    [replicator addSublayer:shape];
+
+    return replicator;
+}
+
+- (CABasicAnimation *)animationForScaleSmall{
+    CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"transform"];
+    basic.fromValue         = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1, 1, 0)];
+    basic.toValue           = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 0)];
+    basic.duration          = 0.8;
+    basic.repeatCount       = HUGE;
+    return basic;
 }
 
 //开始动画
@@ -81,7 +129,6 @@
         self.imageView.layer.speed = 0.0;
         self.imageView.layer.timeOffset = pausedTime;
     }
-
 }
 
 @end
