@@ -14,6 +14,10 @@
 @property (nonatomic, weak) UIImageView *imageView;
 
 @property (nonatomic, strong) UIView *contatinerView;
+@property (nonatomic, strong) CAShapeLayer *leftShapeLayer;
+@property (nonatomic, strong) CAShapeLayer *rightShapeLayer;
+
+@property (nonatomic, assign) BOOL b;
 
 @end
 
@@ -25,6 +29,7 @@
     self.title = @"图片旋转动画";
 
     self.isplay = NO;
+    self.b = NO;
 
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testImg"]];
     [self.view addSubview:imageView];
@@ -62,49 +67,119 @@
     [self.view addSubview:pauseButton];
 
 
-//    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 50, 100)];
-//    containerView.backgroundColor = [UIColor redColor];
-//    containerView.clipsToBounds = YES;
-//    [self.view addSubview:containerView];
-//    self.contatinerView = containerView;
-//
-//    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//    imageView1.image = [UIImage imageNamed:@"testImg"];
-//    imageView1.layer.cornerRadius = 50;
-//    imageView1.layer.masksToBounds = YES;
-//    [containerView addSubview:imageView1];
-
     CALayer *layer = [self lineAnimation];
     layer.backgroundColor = [UIColor redColor].CGColor;
     layer.frame = CGRectMake(20, 200, 70, 26);
     layer.cornerRadius = 13;
     [self.view.layer addSublayer:layer];
+
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 100, 100)];
+    containerView.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:containerView];
+    self.contatinerView = containerView;
+
+
+    UIImage *leftImage = [UIImage imageNamed:@"testImg"];
+    UIImage *rightImage = [UIImage imageNamed:@"testImg1.jpeg"];
+
+    containerView.layer.cornerRadius = 50;
+
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [containerView addSubview:leftView];
+
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    [containerView addSubview:rightView];
+
+    UIBezierPath *leftPath = [UIBezierPath bezierPath];
+    [leftPath addArcWithCenter:CGPointMake(50, 50) radius:50 startAngle:M_PI_2 endAngle:M_PI_2 * 3 clockwise:YES];
+
+    CAShapeLayer *leftShapeLayer = [CAShapeLayer layer];
+    self.leftShapeLayer = leftShapeLayer;
+    leftShapeLayer.path = leftPath.CGPath;
+
+    leftView.layer.contents = (__bridge id)leftImage.CGImage;
+    leftView.layer.mask = leftShapeLayer;
+
+    UIBezierPath *rightPath = [UIBezierPath bezierPath];
+    [rightPath addArcWithCenter:CGPointMake(50, 50) radius:50 startAngle:-M_PI_2 endAngle:M_PI_2 clockwise:YES];
+
+    CAShapeLayer *rightShapeLayer = [CAShapeLayer layer];
+    self.rightShapeLayer = rightShapeLayer;
+    rightShapeLayer.path = rightPath.CGPath;
+
+    rightView.layer.contents = (__bridge id)rightImage.CGImage;
+    rightView.layer.mask = rightShapeLayer;
+
+    [self animateWithAngle:270];
+}
+
+- (void)animateWithAngle:(NSInteger)angle {
+    CGFloat anchorAngleStart = (angle % 360 + 1) * M_PI / 180 - M_PI;
+    CGFloat anchorAngleEnd = (angle % 360 - 1) * M_PI / 180;
+
+    CGFloat micerAngleStart = (angle % 360 + 1) * M_PI / 180;
+    CGFloat micerAngleEnd = (angle % 360 - 1) * M_PI / 180 + M_PI;
+
+    UIBezierPath *leftPath = [UIBezierPath bezierPath];
+    [leftPath addArcWithCenter:CGPointMake(50, 50) radius:49 startAngle:anchorAngleStart endAngle:anchorAngleEnd clockwise:YES];
+    self.leftShapeLayer.path = leftPath.CGPath;
+
+    UIBezierPath *rightPath = [UIBezierPath bezierPath];
+    [rightPath addArcWithCenter:CGPointMake(50, 50) radius:49 startAngle:micerAngleStart endAngle:micerAngleEnd clockwise:YES];
+    self.rightShapeLayer.path = rightPath.CGPath;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self animateWithAngle:angle + 1];
+    });
+}
+
+- (void)trick {
 }
 
 - (CALayer *)lineAnimation{
     /*        创建模板层         */
     CAShapeLayer *shape           = [CAShapeLayer layer];
     shape.frame                   = CGRectMake(15, 10, 4, 6);
-    shape.path                    = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, 4, 6)].CGPath;
-    shape.fillColor               = [UIColor whiteColor].CGColor;
+
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(4, 2)];
+    [path addLineToPoint:CGPointMake(4, 5)];
+    [path addArcWithCenter:CGPointMake(2, 5) radius:2 startAngle:0 endAngle:M_PI clockwise:YES];
+    [path addLineToPoint:CGPointMake(0, 2)];
+    [path addArcWithCenter:CGPointMake(2, 1) radius:2 startAngle:M_PI endAngle:M_PI * 2 clockwise:YES];
+
+    shape.path                    = path.CGPath;
+    shape.fillColor               = [[UIColor whiteColor] colorWithAlphaComponent:0.4].CGColor;
     [shape addAnimation:[self animationForScaleSmall] forKey:nil];
+    [shape addAnimation:[self animationForScaleSmall2] forKey:nil];
 
     /*        创建克隆层的持有对象         */
     CAReplicatorLayer *replicator = [CAReplicatorLayer layer];
-    replicator.instanceDelay      = 0.5;
+    replicator.instanceDelay      = 0.2;
     replicator.instanceCount      = 3;
-    replicator.instanceTransform  = CATransform3DMakeTranslation(15, 0, 0);
+    replicator.instanceTransform  = CATransform3DMakeTranslation(17, 0, 0);
     [replicator addSublayer:shape];
 
     return replicator;
 }
 
-- (CABasicAnimation *)animationForScaleSmall{
+- (CABasicAnimation *)animationForScaleSmall {
     CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"transform"];
     basic.fromValue         = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1, 1, 0)];
     basic.toValue           = [NSValue valueWithCATransform3D:CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 0)];
-    basic.duration          = 0.8;
+    basic.duration          = 0.6;
     basic.repeatCount       = HUGE;
+    basic.autoreverses      = YES;
+    return basic;
+}
+
+- (CABasicAnimation *)animationForScaleSmall2 {
+    CABasicAnimation *basic = [CABasicAnimation animationWithKeyPath:@"fillColor"];
+    basic.fromValue         = (__bridge id _Nullable)([[UIColor whiteColor] colorWithAlphaComponent:0.4].CGColor);
+    basic.toValue           = (__bridge id _Nullable)([[UIColor whiteColor] colorWithAlphaComponent:0.8].CGColor);
+    basic.duration          = 0.6;
+    basic.repeatCount       = HUGE;
+    basic.autoreverses      = YES;
     return basic;
 }
 

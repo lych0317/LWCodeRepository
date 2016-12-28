@@ -36,6 +36,7 @@
 		B39E67F41DCC66C000549B70 /* LWHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E21DCB30AD005048A9 /* LWHttpRequest.m */; };
 		B39E67F51DCC66C400549B70 /* LWHttpUploadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9DF1DCB2F19005048A9 /* LWHttpUploadFile.m */; };
 		B39E67F61DCC66CB00549B70 /* NSString+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = B31174451DCC30EC0011C3C5 /* NSString+Format.m */; };
+		B39F7E941E0CD56400D7170C /* testImg1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B39F7E931E0CD56400D7170C /* testImg1.jpeg */; };
 		B3A5C7D31DE2EE2B003A59A0 /* LWCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5C7D21DE2EE2B003A59A0 /* LWCountView.m */; };
 		B3A5C7FC1DE315E6003A59A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5C7FB1DE315E6003A59A0 /* TableViewController.m */; };
 		B3AB445B1DCB48ED00765500 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = B3AB445A1DCB48ED00765500 /* NSString+Encrypt.m */; };
@@ -104,6 +105,7 @@
 		B3691CC01DC7607600590678 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3691CC61DC760C200590678 /* ValidateObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateObjectTests.m; sourceTree = "<group>"; };
 		B39E67F01DCC660700549B70 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
+		B39F7E931E0CD56400D7170C /* testImg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg1.jpeg; sourceTree = "<group>"; };
 		B3A5C7D11DE2EE2B003A59A0 /* LWCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCountView.h; sourceTree = "<group>"; };
 		B3A5C7D21DE2EE2B003A59A0 /* LWCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWCountView.m; sourceTree = "<group>"; };
 		B3A5C7FA1DE315E6003A59A0 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				B35A2CAC1DFAB1610080778B /* testImg@2x.png */,
+				B39F7E931E0CD56400D7170C /* testImg1.jpeg */,
 				B35A2CA91DFAB0C70080778B /* ImageTransformViewController.h */,
 				B35A2CAA1DFAB0C70080778B /* ImageTransformViewController.m */,
 			);
@@ -398,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39F7E941E0CD56400D7170C /* testImg1.jpeg in Resources */,
 				B35A2CAD1DFAB1610080778B /* testImg@2x.png in Resources */,
 				B32D215F1DC33CBC00AC9F26 /* LaunchScreen.storyboard in Resources */,
 				B32D215C1DC33CBC00AC9F26 /* Assets.xcassets in Resources */,
