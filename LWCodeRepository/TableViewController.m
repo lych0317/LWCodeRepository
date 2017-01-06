@@ -14,12 +14,67 @@
 
 @interface TableViewController ()
 
+@property (nonatomic, copy) void (^cb)(void);
+
 @end
 
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSString *s = @"我是用来测试Unicode编码的";
+
+    NSString *se = [s urlEncode];
+
+    NSString *sd = [s urlDecode];
+
+//    NSString *u = s; //[s stringByAddingPercentEscapesUsingEncoding:NSUTF16StringEncoding];
+//
+    NSString *su = [s stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet characterSetWithRange:NSMakeRange(0, s.length)]];
+
+    NSString *sss = [se stringByRemovingPercentEncoding];
+//
+//    BOOL b = [s canBeConvertedToEncoding:NSUnicodeStringEncoding];
+//
+//    char *c = [s cStringUsingEncoding:NSUnicodeStringEncoding];
+//
+//    printf("dddd%s    ", c);
+//
+//    NSData *d = [s dataUsingEncoding:NSUnicodeStringEncoding];
+//
+//    [d ]
+
+//    NSString *sd = [NSPropertyListSerialization propertyListWithData:d options:NSPropertyListImmutable  format:NSPropertyListBinaryFormat_v1_0  error:NULL];
+
+    LWLogInfo(@"s: %@ \nse: %@ \nsd: %@ \nsu: %@ \nsss: %@", s, se, sd, su, sss);
+
+    self.cb = ^ {
+        LWLogInfo(@"callback");
+    };
+
+    [self performSelector:@selector(test:) withObject:self.cb afterDelay:3];
+
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(test:) object:self.cb];
+}
+
+- (NSString *)replaceUnicode:(NSString *)unicodeStr
+{
+    NSString *tempStr1 = [unicodeStr stringByReplacingOccurrencesOfString:@"\\u" withString:@"\\U"];
+    NSString *tempStr2 = [tempStr1 stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+    NSString *tempStr3 = [[@"\"" stringByAppendingString:tempStr2] stringByAppendingString:@"\""];
+    NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+    //旧方法
+    //    NSString *returnStr = [NSPropertyListSerialization propertyListFromData:tempData mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
+    //新方法
+    NSString *returnStr = [NSPropertyListSerialization propertyListWithData:tempData options:NSPropertyListImmutable  format:NULL  error:NULL];
+
+
+    return [returnStr stringByReplacingOccurrencesOfString:@"\\r\\n" withString:@"\n"];
+}
+
+- (void)test:(void (^)(void))callback {
+    LWLogInfo(@"test");
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

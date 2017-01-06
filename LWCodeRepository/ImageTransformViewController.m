@@ -13,6 +13,7 @@
 @property (nonatomic, assign) BOOL isplay;
 @property (nonatomic, weak) UIImageView *imageView;
 
+@property (nonatomic, strong) UIView *animateImageView;
 @property (nonatomic, strong) UIView *contatinerView;
 @property (nonatomic, strong) CAShapeLayer *leftShapeLayer;
 @property (nonatomic, strong) CAShapeLayer *rightShapeLayer;
@@ -73,25 +74,29 @@
     layer.cornerRadius = 13;
     [self.view.layer addSublayer:layer];
 
-    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 100, 100)];
+    UIView *animateImageView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 220, 220)];
+    [self.view addSubview:animateImageView];
+    self.animateImageView = animateImageView;
+
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 156, 156)];
+    containerView.center = animateImageView.center;
     containerView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:containerView];
     self.contatinerView = containerView;
 
-
     UIImage *leftImage = [UIImage imageNamed:@"testImg"];
     UIImage *rightImage = [UIImage imageNamed:@"testImg1.jpeg"];
 
-    containerView.layer.cornerRadius = 50;
+    containerView.layer.cornerRadius = 78;
 
-    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 156, 156)];
     [containerView addSubview:leftView];
 
-    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 156, 156)];
     [containerView addSubview:rightView];
 
     UIBezierPath *leftPath = [UIBezierPath bezierPath];
-    [leftPath addArcWithCenter:CGPointMake(50, 50) radius:50 startAngle:M_PI_2 endAngle:M_PI_2 * 3 clockwise:YES];
+    [leftPath addArcWithCenter:CGPointMake(78, 78) radius:78 startAngle:M_PI_2 endAngle:M_PI_2 * 3 clockwise:YES];
 
     CAShapeLayer *leftShapeLayer = [CAShapeLayer layer];
     self.leftShapeLayer = leftShapeLayer;
@@ -101,7 +106,7 @@
     leftView.layer.mask = leftShapeLayer;
 
     UIBezierPath *rightPath = [UIBezierPath bezierPath];
-    [rightPath addArcWithCenter:CGPointMake(50, 50) radius:50 startAngle:-M_PI_2 endAngle:M_PI_2 clockwise:YES];
+    [rightPath addArcWithCenter:CGPointMake(78, 78) radius:78 startAngle:-M_PI_2 endAngle:M_PI_2 clockwise:YES];
 
     CAShapeLayer *rightShapeLayer = [CAShapeLayer layer];
     self.rightShapeLayer = rightShapeLayer;
@@ -110,10 +115,10 @@
     rightView.layer.contents = (__bridge id)rightImage.CGImage;
     rightView.layer.mask = rightShapeLayer;
 
-    [self animateWithAngle:270];
+    [self animateWithAngle:270 animateIndex:0];
 }
 
-- (void)animateWithAngle:(NSInteger)angle {
+- (void)animateWithAngle:(NSInteger)angle animateIndex:(NSInteger)index {
     CGFloat anchorAngleStart = (angle % 360 + 1) * M_PI / 180 - M_PI;
     CGFloat anchorAngleEnd = (angle % 360 - 1) * M_PI / 180;
 
@@ -121,15 +126,22 @@
     CGFloat micerAngleEnd = (angle % 360 - 1) * M_PI / 180 + M_PI;
 
     UIBezierPath *leftPath = [UIBezierPath bezierPath];
-    [leftPath addArcWithCenter:CGPointMake(50, 50) radius:49 startAngle:anchorAngleStart endAngle:anchorAngleEnd clockwise:YES];
+    [leftPath addArcWithCenter:CGPointMake(78, 78) radius:77 startAngle:anchorAngleStart endAngle:anchorAngleEnd clockwise:YES];
     self.leftShapeLayer.path = leftPath.CGPath;
 
     UIBezierPath *rightPath = [UIBezierPath bezierPath];
-    [rightPath addArcWithCenter:CGPointMake(50, 50) radius:49 startAngle:micerAngleStart endAngle:micerAngleEnd clockwise:YES];
+    [rightPath addArcWithCenter:CGPointMake(78, 78) radius:77 startAngle:micerAngleStart endAngle:micerAngleEnd clockwise:YES];
     self.rightShapeLayer.path = rightPath.CGPath;
 
+    if (index > 29) {
+        index = 0;
+    }
+    NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"anim_head_%@@2x", @(index)] ofType:@"png"];
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    self.animateImageView.layer.contents = (__bridge id)[image CGImage];
+
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self animateWithAngle:angle + 1];
+        [self animateWithAngle:angle + 1 animateIndex:index + 1];
     });
 }
 
@@ -139,7 +151,7 @@
 - (CALayer *)lineAnimation{
     /*        创建模板层         */
     CAShapeLayer *shape           = [CAShapeLayer layer];
-    shape.frame                   = CGRectMake(15, 10, 4, 6);
+    shape.frame                   = CGRectMake(22, 10, 4, 6);
 
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:CGPointMake(4, 2)];
@@ -155,9 +167,9 @@
 
     /*        创建克隆层的持有对象         */
     CAReplicatorLayer *replicator = [CAReplicatorLayer layer];
-    replicator.instanceDelay      = 0.2;
+    replicator.instanceDelay      = 0.4;
     replicator.instanceCount      = 3;
-    replicator.instanceTransform  = CATransform3DMakeTranslation(17, 0, 0);
+    replicator.instanceTransform  = CATransform3DMakeTranslation(11, 0, 0);
     [replicator addSublayer:shape];
 
     return replicator;
