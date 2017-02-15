@@ -10,4 +10,6 @@
 
 @interface LWCountView : UIView
 
+- (void)cancel;
+
 @end

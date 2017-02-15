@@ -67,8 +67,20 @@
 
         [self addGestureRecognizer:tapGesture];
         [self addGestureRecognizer:longPressGesture];
+
+//        __weak typeof(LWCountView *) ws = self;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            LWLogInfo(@"hahahha %@", self);
+        });
+
+
+//        [self performSelector:@selector(test) withObject:nil afterDelay:10];
     }
     return self;
+}
+
+- (void)test {
+    LWLogInfo(@"hahahah %@", self);
 }
 
 - (void)tapGestureAction:(UITapGestureRecognizer *)action {
@@ -127,6 +139,14 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [weakSelf increase:time];
     });
+}
+
+- (void)cancel {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(test) object:nil];
+}
+
+- (void)dealloc {
+    LWLogInfo(@"count view dealloc");
 }
 
 @end

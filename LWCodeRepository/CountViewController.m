@@ -11,6 +11,8 @@
 
 @interface CountViewController ()
 
+@property (nonatomic, strong) LWCountView *countView;
+
 @end
 
 @implementation CountViewController
@@ -22,6 +24,15 @@
     LWCountView *countView = [[LWCountView alloc] init];
     countView.frame = CGRectMake(100, 300, 200, 44);
     [self.view addSubview:countView];
+    self.countView = countView;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+//    self.countView = nil;
+//
+//    LWLogInfo(@"count view %@", self.countView);
 }
 
 @end
