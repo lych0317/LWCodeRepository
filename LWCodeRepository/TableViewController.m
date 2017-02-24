@@ -12,6 +12,7 @@
 #import "WebPImageViewController.h"
 #import "ImageTransformViewController.h"
 #import "PRViewController.h"
+#import "LWPushPopViewController.h"
 
 @interface TableViewController ()
 
@@ -91,6 +92,9 @@
         }
         else if (indexPath.row == 3) {
             [self.navigationController pushViewController:[[ImageTransformViewController alloc] init] animated:YES];
+        }
+        else if (indexPath.row == 4) {
+            [self.navigationController pushViewController:[[LWPushPopViewController alloc] init] animated:YES];
         }
     }
     else if (indexPath.section == 1) {
