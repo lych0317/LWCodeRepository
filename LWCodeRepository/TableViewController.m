@@ -11,6 +11,7 @@
 #import "MasonryViewController.h"
 #import "WebPImageViewController.h"
 #import "ImageTransformViewController.h"
+#import "PRViewController.h"
 
 @interface TableViewController ()
 
@@ -90,6 +91,11 @@
         }
         else if (indexPath.row == 3) {
             [self.navigationController pushViewController:[[ImageTransformViewController alloc] init] animated:YES];
+        }
+    }
+    else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            [self.navigationController pushViewController:[[PRViewController alloc] init] animated:YES];
         }
     }
 }

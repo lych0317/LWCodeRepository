@@ -116,8 +116,6 @@
     rightView.layer.mask = rightShapeLayer;
 
     [self animateWithAngle:270 animateIndex:0];
-
-
 }
 
 - (void)dealloc {
