@@ -20,4 +20,15 @@
     self.view.backgroundColor = [UIColor redColor];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    LWLogInfo(@"1 %@", self.navigationController);
+    self.navigationController.delegate = nil;
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    LWLogInfo(@"2 %@", self.navigationController);
+}
+
 @end

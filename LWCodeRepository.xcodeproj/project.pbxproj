@@ -34,6 +34,8 @@
 		B38F66141E603947000725C5 /* LWPushPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F66131E603947000725C5 /* LWPushPopAnimation.m */; };
 		B38F66171E603B07000725C5 /* LWPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F66161E603B07000725C5 /* LWPopViewController.m */; };
 		B38F661A1E603C33000725C5 /* LWPushPopTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F66191E603C33000725C5 /* LWPushPopTarget.m */; };
+		B38F66241E612D57000725C5 /* LWDSLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F66231E612D57000725C5 /* LWDSLViewController.m */; };
+		B38F66271E612DBC000725C5 /* LWViewMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = B38F66261E612DBC000725C5 /* LWViewMaker.m */; };
 		B39E67F11DCC660700549B70 /* HttpRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B39E67F01DCC660700549B70 /* HttpRequestTests.m */; };
 		B39E67F21DCC66B800549B70 /* LWHttpRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E51DCB3152005048A9 /* LWHttpRequestManager.m */; };
 		B39E67F31DCC66BC00549B70 /* LWHttpConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B358E9E81DCB323C005048A9 /* LWHttpConfigure.m */; };
@@ -148,6 +150,10 @@
 		B38F66161E603B07000725C5 /* LWPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPopViewController.m; sourceTree = "<group>"; };
 		B38F66181E603C33000725C5 /* LWPushPopTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWPushPopTarget.h; sourceTree = "<group>"; };
 		B38F66191E603C33000725C5 /* LWPushPopTarget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWPushPopTarget.m; sourceTree = "<group>"; };
+		B38F66221E612D57000725C5 /* LWDSLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWDSLViewController.h; sourceTree = "<group>"; };
+		B38F66231E612D57000725C5 /* LWDSLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWDSLViewController.m; sourceTree = "<group>"; };
+		B38F66251E612DBC000725C5 /* LWViewMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWViewMaker.h; sourceTree = "<group>"; };
+		B38F66261E612DBC000725C5 /* LWViewMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWViewMaker.m; sourceTree = "<group>"; };
 		B39E67F01DCC660700549B70 /* HttpRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequestTests.m; sourceTree = "<group>"; };
 		B39F7E931E0CD56400D7170C /* testImg1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImg1.jpeg; sourceTree = "<group>"; };
 		B3A5C7D11DE2EE2B003A59A0 /* LWCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWCountView.h; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 		B38F66081E5E8519000725C5 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B38F66211E612D0E000725C5 /* DSL */,
 				B38F660A1E5E8535000725C5 /* PromiseKit&ReactiveCocoa */,
 			);
 			name = Logic;
@@ -370,6 +377,17 @@
 				B38F66191E603C33000725C5 /* LWPushPopTarget.m */,
 			);
 			name = "push/pop动画";
+			sourceTree = "<group>";
+		};
+		B38F66211E612D0E000725C5 /* DSL */ = {
+			isa = PBXGroup;
+			children = (
+				B38F66221E612D57000725C5 /* LWDSLViewController.h */,
+				B38F66231E612D57000725C5 /* LWDSLViewController.m */,
+				B38F66251E612DBC000725C5 /* LWViewMaker.h */,
+				B38F66261E612DBC000725C5 /* LWViewMaker.m */,
+			);
+			name = DSL;
 			sourceTree = "<group>";
 		};
 		B3DC25C11DC3514500F77A10 /* Classes */ = {
@@ -704,8 +722,10 @@
 				B38F66111E6037CA000725C5 /* LWPushPopViewController.m in Sources */,
 				B38F66141E603947000725C5 /* LWPushPopAnimation.m in Sources */,
 				B31174461DCC30EC0011C3C5 /* NSString+Format.m in Sources */,
+				B38F66241E612D57000725C5 /* LWDSLViewController.m in Sources */,
 				B35A2C9E1DFAA5B50080778B /* CountViewController.m in Sources */,
 				B3A5C7D31DE2EE2B003A59A0 /* LWCountView.m in Sources */,
+				B38F66271E612DBC000725C5 /* LWViewMaker.m in Sources */,
 				B358E9E61DCB3152005048A9 /* LWHttpRequestManager.m in Sources */,
 				B358E9EC1DCB3DF2005048A9 /* NSString+URL.m in Sources */,
 				B3A5C7FC1DE315E6003A59A0 /* TableViewController.m in Sources */,

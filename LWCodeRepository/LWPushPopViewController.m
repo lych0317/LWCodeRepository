@@ -24,7 +24,6 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.pushPopTarget = [[LWPushPopTarget alloc] init];
-    self.navigationController.delegate = self.pushPopTarget;
 
     UIButton *button = [[UIButton alloc] init];
     [button setTitle:@"Push" forState:UIControlStateNormal];
@@ -32,6 +31,7 @@
 
     __weak LWPushPopViewController *weakSelf = self;
     [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        weakSelf.navigationController.delegate = weakSelf.pushPopTarget;
         [weakSelf.navigationController pushViewController:[[LWPopViewController alloc] init] animated:YES];
     }];
     [self.view addSubview:button];
