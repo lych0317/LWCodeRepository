@@ -23,9 +23,11 @@
         [[transitionContext containerView] addSubview:toViewController.view];
 
         toViewController.view.frame = fromViewController.redView.frame;
+        toViewController.view.layer.cornerRadius = fromViewController.redView.frame.size.width / 2;
 
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             toViewController.view.frame = fromViewController.view.frame;
+            toViewController.view.layer.cornerRadius = 0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];
@@ -37,6 +39,7 @@
 
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             fromViewController.view.frame = toViewController.redView.frame;
+            fromViewController.view.layer.cornerRadius = toViewController.redView.frame.size.width / 2;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         }];

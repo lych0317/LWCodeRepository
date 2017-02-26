@@ -74,7 +74,7 @@
     layer.cornerRadius = 13;
     [self.view.layer addSublayer:layer];
 
-    UIView *animateImageView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 220, 220)];
+    UIView *animateImageView = [[UIView alloc] initWithFrame:CGRectMake(50, 350, 220, 220)];
     [self.view addSubview:animateImageView];
     self.animateImageView = animateImageView;
 
