@@ -14,6 +14,7 @@
 #import "PRViewController.h"
 #import "LWPushPopViewController.h"
 #import "LWDSLViewController.h"
+#import "MasonryCrashViewController.h"
 
 @interface TableViewController ()
 
@@ -25,6 +26,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    NSArray *array = @[@{@"1": @"1"}, @{@"2": @"2"}, @{@"3": @"3"}];
+
+    LWLogInfo(@"===== %d %d", [array isEqual:array.firstObject], array == array.firstObject);
+    LWLogInfo(@"===== %d %d", [array.firstObject isEqual:array], array.firstObject == array);
+
+    int i[3] = {1, 2, 3};
+
+    LWLogInfo(@"%p", i);
+    LWLogInfo(@"%p", i[0]);
+
 
     NSString *s = @"我是用来测试Unicode编码的";
 
@@ -96,6 +108,9 @@
         }
         else if (indexPath.row == 4) {
             [self.navigationController pushViewController:[[LWPushPopViewController alloc] init] animated:YES];
+        }
+        else if (indexPath.row == 5) {
+            [self.navigationController pushViewController:[[MasonryCrashViewController alloc] init] animated:YES];
         }
     }
     else if (indexPath.section == 1) {

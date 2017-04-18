@@ -7,6 +7,7 @@
 //
 
 #import "ImageTransformViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ImageTransformViewController ()
 
@@ -31,6 +32,14 @@
 
     self.isplay = NO;
     self.b = NO;
+
+    UIImageView *iv = [[UIImageView alloc] initWithFrame:CGRectMake(10, 80, 50, 50)];
+    iv.backgroundColor = [UIColor redColor];
+    [self.view addSubview:iv];
+    [iv sd_setImageWithURL:[NSURL URLWithString:@"https://img.meituan.net/msmerchant/294611362591823be489a63e8d026c44124543.gif%40700w_700h_0e_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        LWLogInfo(@"image is %p", image.images.firstObject);
+        LWLogInfo(@"iv.image is %p", iv.image);
+    }];
 
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"testImg"]];
     [self.view addSubview:imageView];
