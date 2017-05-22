@@ -43,6 +43,10 @@
     }];
     [self.view addSubview:button];
 
+    [[[RACObserve(button, highlighted) distinctUntilChanged] skip:1] subscribeNext:^(NSNumber *status) {
+        LWLogInfo(@"status %@", status);
+    }];
+
     [button makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(20);
         make.top.equalTo(84);

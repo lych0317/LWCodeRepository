@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		169AA43EE8C290E1B96F24FB /* libPods-CodeRepository-LWCodeRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3A68F746080B2FD40930FF /* libPods-CodeRepository-LWCodeRepository.a */; };
+		48209C361ED300A700A36972 /* AutoAdaptTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48209C351ED300A700A36972 /* AutoAdaptTableViewController.m */; };
 		4833E97C1E7F8771002634C9 /* MasonryCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4833E97B1E7F8771002634C9 /* MasonryCrashViewController.m */; };
 		B31174461DCC30EC0011C3C5 /* NSString+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = B31174451DCC30EC0011C3C5 /* NSString+Format.m */; };
 		B32D21511DC33CBC00AC9F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B32D21501DC33CBC00AC9F26 /* main.m */; };
@@ -101,6 +102,8 @@
 		11F1C0CB909F0EF5623C861F /* Pods-CodeRepository-LWCodeRepository.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepository/Pods-CodeRepository-LWCodeRepository.debug.xcconfig"; sourceTree = "<group>"; };
 		2B3A68F746080B2FD40930FF /* libPods-CodeRepository-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CodeRepository-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34438FF3E3BD3B9E2EEE7B28 /* libPods-LWCodeRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LWCodeRepository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48209C341ED300A700A36972 /* AutoAdaptTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoAdaptTableViewController.h; sourceTree = "<group>"; };
+		48209C351ED300A700A36972 /* AutoAdaptTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoAdaptTableViewController.m; sourceTree = "<group>"; };
 		4833E97A1E7F8771002634C9 /* MasonryCrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryCrashViewController.h; sourceTree = "<group>"; };
 		4833E97B1E7F8771002634C9 /* MasonryCrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryCrashViewController.m; sourceTree = "<group>"; };
 		4E8ABFECDC9F7D927E6E442B /* Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeRepository-LWCodeRepositoryTests/Pods-CodeRepository-LWCodeRepositoryTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,6 +226,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48209C331ED3007300A36972 /* tableview cell 自适应高度 */ = {
+			isa = PBXGroup;
+			children = (
+				48209C341ED300A700A36972 /* AutoAdaptTableViewController.h */,
+				48209C351ED300A700A36972 /* AutoAdaptTableViewController.m */,
+			);
+			name = "tableview cell 自适应高度";
+			sourceTree = "<group>";
+		};
 		4833E97D1E7F877C002634C9 /* masonry的crash */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,6 +370,7 @@
 		B38F66091E5E8527000725C5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				48209C331ED3007300A36972 /* tableview cell 自适应高度 */,
 				4833E97D1E7F877C002634C9 /* masonry的crash */,
 				B38F660E1E603796000725C5 /* push/pop动画 */,
 				B35A2CA81DFAAFB50080778B /* 图片旋转动画 */,
@@ -755,6 +768,7 @@
 				B32D21511DC33CBC00AC9F26 /* main.m in Sources */,
 				B3691CB41DC71BD600590678 /* NSObject+Validate.m in Sources */,
 				B3AB445B1DCB48ED00765500 /* NSString+Encrypt.m in Sources */,
+				48209C361ED300A700A36972 /* AutoAdaptTableViewController.m in Sources */,
 				B38F660D1E5E8581000725C5 /* PRViewController.m in Sources */,
 				B38F661A1E603C33000725C5 /* LWPushPopTarget.m in Sources */,
 				B38F66171E603B07000725C5 /* LWPopViewController.m in Sources */,

@@ -15,6 +15,7 @@
 #import "LWPushPopViewController.h"
 #import "LWDSLViewController.h"
 #import "MasonryCrashViewController.h"
+#import "AutoAdaptTableViewController.h"
 
 @interface TableViewController ()
 
@@ -111,6 +112,9 @@
         }
         else if (indexPath.row == 5) {
             [self.navigationController pushViewController:[[MasonryCrashViewController alloc] init] animated:YES];
+        }
+        else if (indexPath.row == 6) {
+            [self.navigationController pushViewController:[[AutoAdaptTableViewController alloc] init] animated:YES];
         }
     }
     else if (indexPath.section == 1) {
